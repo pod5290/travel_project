@@ -1,13 +1,9 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { getTourById, getAllTours, formatPrice } from "@/lib/data";
-import type { Tour } from "@/generated/prisma/client";
+import { getTourById, formatPrice } from "@/lib/data";
 
-export async function generateStaticParams() {
-  const tours: Tour[] = await getAllTours();
-  return tours.map((tour) => ({ id: tour.id }));
-}
+export const dynamic = "force-dynamic";
 
 type Props = {
   params: Promise<{ id: string }>;

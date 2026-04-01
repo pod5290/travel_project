@@ -2,6 +2,8 @@ import TourCard from "@/components/TourCard";
 import { getAllTours } from "@/lib/data";
 import type { Tour } from "@/generated/prisma/client";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = {
   title: "여행상품 목록 - 트래블샵",
 };

@@ -2,6 +2,8 @@ import Link from "next/link";
 import TourCard from "@/components/TourCard";
 import { getAllTours } from "@/lib/data";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const tours = await getAllTours();
   const featured = tours.slice(0, 3);
